@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="left_arrow.png" />
+    <None Remove="play.png" />
+    <None Remove="previous.png" />
+    <None Remove="repeat.png" />
+    <None Remove="right_arrow.png" />
+    <None Remove="shuffle.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="2.1.1" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="left_arrow.png" />
+    <Resource Include="play.png" />
+    <Resource Include="previous.png" />
+    <Resource Include="repeat.png" />
+    <Resource Include="right_arrow.png" />
+    <Resource Include="shuffle.png" />
+  </ItemGroup>
+
+</Project>
