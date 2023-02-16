@@ -18,51 +18,44 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height ="0.5*"/>
-            <RowDefinition Height ="2*"/>
+            <RowDefinition Height ="1.8*"/>
+            <RowDefinition Height="0.3*"/>
             <RowDefinition Height ="*"/>
         </Grid.RowDefinitions>
         <ListBox Grid.Row="1" Grid.ColumnSpan="6" HorizontalContentAlignment="Center" FontSize="20">
         </ListBox>
-        <Button x:Name="Open_folder" Content="Открыть папку с музыкой" Grid.ColumnSpan="6"  VerticalAlignment="Center" Margin="30,0,30,0"/>
-        <Button x:Name="Previous" Content="" Grid.Row="2" Grid.Column="0" BorderBrush="White">
+        <Button x:Name="Open_folder" Content="Открыть папку с музыкой" Grid.ColumnSpan="6"  VerticalAlignment="Center" Margin="30,0,30,0" Click="Open_folder_Click"/>
+        <Button x:Name="Previous" Grid.Row="3" Grid.Column="0" BorderBrush="White">
             <Button.Background>
-                <ImageBrush ImageSource="/previous.png"/>
+                <ImageBrush/>
             </Button.Background>
+            <Image x:Name="Previous_image" Height="100" Grid.RowSpan="3" Width="100" Source="/previous.png"/>
         </Button>
-        <Button x:Name="Play_pause" Grid.Row="2" Grid.Column="1" BorderBrush="White" Click="Play_pause_Click" MouseMove="Play_pause_MouseMove">
+        <Button x:Name="Play_pause" Grid.Row="3" Grid.Column="1" BorderBrush="White" Click="Play_pause_Click">
             <Button.Background>
-                <ImageBrush x:Name="play_pause_image" ImageSource="/play.png" />
+                <ImageBrush/>
             </Button.Background>
+            <Image x:Name="Play_pause_image"/>
         </Button>
-        <Button x:Name="Next" Content="" Grid.Row="2" Grid.Column="2" BorderBrush="White">
+        <Button x:Name="Next" Grid.Row="3" Grid.Column="2" BorderBrush="White">
             <Button.Background>
-                <ImageBrush ImageSource="/right_arrow.png"/>
+                <ImageBrush/>
             </Button.Background>
+            <Image x:Name="Next_image" Height="100" Grid.RowSpan="3" Width="100" Source="/right_arrow.png"/>
         </Button>
-        <Button x:Name="Shuffle" Content="" Grid.Row="2" Grid.Column="3" BorderBrush="White">
+        <Button x:Name="Shuffle" Grid.Row="3" Grid.Column="3" BorderBrush="White">
             <Button.Background>
-                <ImageBrush ImageSource="/shuffle.png"/>
+                <ImageBrush/>
             </Button.Background>
+            <Image x:Name="Shuffle_image" Height="100" Grid.RowSpan="3" Width="100" Source="/shuffle.png"/>
         </Button>
-        <Button x:Name="Repeat" Content="" Grid.Row="2" Grid.Column="4" BorderBrush="White">
+        <Button x:Name="Repeat" Grid.Row="3" Grid.Column="4" BorderBrush="White">
             <Button.Background>
-                <ImageBrush ImageSource="/repeat.png"/>
+                <ImageBrush/>
             </Button.Background>
+            <Image x:Name="Repeat_image" Height="100" Grid.RowSpan="3" Width="100" Source="/repeat.png"/>
         </Button>
-        <Slider Grid.ColumnSpan="2" Width="120" Grid.Row="2" Grid.Column="5"/>
-        <Border x:Name="border"
-                    Background="{TemplateBinding Background}"
-                    BorderBrush="{TemplateBinding BorderBrush}"
-                    BorderThickness="{TemplateBinding BorderThickness}"
-                    SnapsToDevicePixels="true">
-            <ContentPresenter x:Name="contentPresenter"
-                                Margin="{TemplateBinding Padding}"
-                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                Focusable="False"
-                                RecognizesAccessKey="True"
-                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-        </Border>
-        
+        <Slider x:Name="Volume" Grid.ColumnSpan="2" Width="120" Grid.Row="3" Grid.Column="5"/>
+        <RibbonButton></RibbonButton>
     </Grid>
 </Window>

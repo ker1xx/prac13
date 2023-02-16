@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="13021.png" />
+    <None Remove="free-icon-pause-button-3249396.png" />
     <None Remove="left_arrow.png" />
     <None Remove="play.png" />
     <None Remove="previous.png" />
@@ -22,6 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="13021.png" />
+    <Resource Include="free-icon-pause-button-3249396.png" />
     <Resource Include="left_arrow.png" />
     <Resource Include="play.png" />
     <Resource Include="previous.png" />
