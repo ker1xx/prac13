@@ -17,15 +17,15 @@
             <ColumnDefinition Width=" 2*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height ="0.5*"/>
+            <RowDefinition Height ="0.4*"/>
             <RowDefinition Height ="1.8*"/>
-            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.5*"/>
             <RowDefinition Height ="*"/>
         </Grid.RowDefinitions>
-        <ListBox x:Name="all_songs" Grid.Row="1" Grid.ColumnSpan="6" HorizontalContentAlignment="Center" FontSize="20">
+        <ListBox x:Name="all_songs" Grid.Row="1" Grid.ColumnSpan="6" HorizontalContentAlignment="Left" FontSize="20" SelectionChanged="all_songs_SelectionChanged">
         </ListBox>
         <Button x:Name="Open_folder" Content="Открыть папку с музыкой" Grid.ColumnSpan="6"  VerticalAlignment="Center" Margin="30,0,30,0" Click="Open_folder_Click"/>
-        <Button x:Name="Previous" Grid.Row="3" Grid.Column="0" BorderBrush="White">
+        <Button x:Name="Previous" Grid.Row="3" Grid.Column="0" BorderBrush="White" Click="Previous_Click">
             <Button.Background>
                 <ImageBrush x:Name="previous_image" ImageSource="/previous.png"/>
             </Button.Background>
@@ -35,23 +35,25 @@
                 <ImageBrush x:Name="play_pause_image" ImageSource="/13021.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Next" Grid.Row="3" Grid.Column="2" BorderBrush="White">
+        <Button x:Name="Next" Grid.Row="3" Grid.Column="2" BorderBrush="White" Click="Next_Click">
             <Button.Background>
                 <ImageBrush x:Name="next_image" ImageSource="/right_arrow.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Shuffle" Grid.Row="3" Grid.Column="3" BorderBrush="White">
+        <Button x:Name="Shuffle" Grid.Row="3" Grid.Column="3" BorderBrush="White" Click="Shuffle_Click">
             <Button.Background>
                 <ImageBrush x:Name="shuffle_image" ImageSource="/shuffle.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Repeat" Grid.Row="3" Grid.Column="4" BorderBrush="White">
+        <Button x:Name="Repeat" Grid.Row="3" Grid.Column="4" BorderBrush="White" Click="Repeat_Click">
             <Button.Background>
                 <ImageBrush x:Name="repeat_image" ImageSource="/repeat.png"/>
             </Button.Background>
         </Button>
-        <Slider x:Name="Volume" Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="5" VerticalAlignment="Center" Margin="30" ValueChanged="Volume_ValueChanged"/>
-        <Slider x:Name="Timeline" Grid.ColumnSpan="6" Grid.Row="2" Margin="30,-10,30,0" VerticalAlignment="Center" ValueChanged="Timeline_ValueChanged_1"/>
         <MediaElement x:Name="Media" LoadedBehavior="Manual" MediaOpened="Media_MediaOpened"/>
+        <Slider x:Name="Volume" Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="5" VerticalAlignment="Center" Margin="30" ValueChanged="Volume_ValueChanged"/>
+        <Slider x:Name="Timeline" Grid.ColumnSpan="6" Grid.Row="2" Margin="30,10,30,0" VerticalAlignment="Top" ValueChanged="Timeline_ValueChanged_1"/>
+        <Label x:Name="CurrentTimer" Grid.Column="0" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10,0,0,2"/>
+        <Label x:Name="DurationOfSong" Grid.Column="5" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,2"/>
     </Grid>
 </Window>

@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\klink\Source\Repos\prac13\prac13\obj\Debug\net6.0-windows\
-prac13
+C:\Users\klink\source\repos\player\prac13\obj\Debug\net6.0-windows\
+prac13_lflms4j0_wpftmp
 none
 false
-TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\klink\Source\Repos\prac13\prac13\App.xaml
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
+C:\Users\klink\source\repos\player\prac13\App.xaml
 11407045341
 
-3-1233169557
-197-649734754
+5896525247
+398581851342
 MainWindow.xaml;
 
 False

@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\prac13"
   ],
-  "SelectedNode": "\\prac13.sln",
+  "SelectedNode": "\\prac13\\MainWindow.xaml.cs",
   "PreviewInSolutionExplorer": false
 }
